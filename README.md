@@ -1,4 +1,5 @@
 prompt datos: 
+
 generame un dataset de acuerdo a la siguiente estructura:
 
 - Customer ID:
@@ -46,6 +47,7 @@ sesión? (Evitar fechas futuras).
 catálogo? Validado el dataset, este se convierte en el combustible para la interfaz que diseñaremos a continuación.
 
 prompt pagina: 
+
 - ● Fondo: Oscuro  (#1E1E1E) para una estética tecnológica y moderna.
 
 - ● Tipografía: Playfair Display (limpia y legible para datos numéricos).
