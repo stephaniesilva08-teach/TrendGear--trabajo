@@ -28,22 +28,22 @@ generame un dataset de acuerdo a la siguiente estructura:
 - ejemplo:
 CUST__001, nat Doe, nat@example.com, hamburguesa, 2023-10-12, 2500, 25, china, Credit Card, activa. Aprox 8000 registros. Validando todo el dataset con esto: ● Números: ¿Edades entre 13 y 100? ¿Montos >= 0?
 
-- ● Fechas: ¿Formato ISO YYYY-MM-DD? ¿Es la fecha de compra anterior o igual al último inicio de
+ ● Fechas: ¿Formato ISO YYYY-MM-DD? ¿Es la fecha de compra anterior o igual al último inicio de
 sesión? (Evitar fechas futuras).
 
-- ● Categorías: ¿Valores normalizados (ej. "Credit Card" y no "credit card")?
+ ● Categorías: ¿Valores normalizados (ej. "Credit Card" y no "credit card")?
 
-- ● Unicidad: ¿IDs únicos sin duplicados?
+ ● Unicidad: ¿IDs únicos sin duplicados?
 
-- ● Valida que los productPurchased sean comidas rapidas(hamburguesa,perro,salchipapa etc)
+ ● Valida que los productPurchased sean comidas rapidas(hamburguesa,perro,salchipapa etc)
 
-- ● Valida que el amountSpent sea de 4 digitos o 6 digitos 
+ ● Valida que el amountSpent sea de 4 digitos o 6 digitos 
 
-- ● Valida que city solo sean de Colombia 
+ ● Valida que city solo sean de Colombia 
 
-- ● Valida que el payment method solo sea Credit Card y Paypal
+ ● Valida que el payment method solo sea Credit Card y Paypal
 
-- ● Coherencia Cruzada: ¿Correos con dominio seguro (example.com)? ¿Ciudad coherente con el
+ ● Coherencia Cruzada: ¿Correos con dominio seguro (example.com)? ¿Ciudad coherente con el
 catálogo? Validado el dataset, este se convierte en el combustible para la interfaz que diseñaremos a continuación.
 
 prompt pagina: 
@@ -53,7 +53,7 @@ prompt pagina:
 - ● Tipografía: Playfair Display (limpia y legible para datos numéricos).
 
 - ● Color de Acento:#D8E2DC (verde grisáceo suave)
-- 
+  
 #FFE5D9 (rosado claro cálido)
 
 #FFCAD4 (rosado pastel)
