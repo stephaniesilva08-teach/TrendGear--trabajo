@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendGear Dashboard | Premium Edition</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>Trend<span>Gear</span></h1>
+        </div>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="index.html">Clientes</a>
+            <a href="index.html">Ventas</a>
+            <button class="btn-primary" id="btnReload">Admin Gold</button>
+        </nav>
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- KPI -->
+        <section class="kpi-grid">
+            <div class="kpi-card accent-green">
+                <h3>Total Ventas (USD)</h3>
+                <p id="kpiTotalRevenue">$0</p>
+                <span>Métricas en tiempo real</span>
+            </div>
+
+            <div class="kpi-card accent-peach">
+                <h3>Ticket Promedio</h3>
+                <p id="kpiAvgSpent">$0</p>
+                <span>Promedio General</span>
+            </div>
+
+            <div class="kpi-card accent-pink">
+                <h3>Edad Promedio</h3>
+                <p id="kpiAvgAge">0 años</p>
+                <span>Target Demográfico</span>
+            </div>
+
+            <div class="kpi-card accent-purple">
+                <h3>Clientes Activos</h3>
+                <p id="kpiPremiumCount">0</p>
+                <span>Membresías activas</span>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="controls-bar">
+            <h2>Registro de Transacciones</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+            </div>
+        </section>
+
+        <!-- Tabla -->
+        <section class="table-container">
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                        <th>Edad</th>
+                        <th>Ciudad</th>
+                        <th>Pago</th>
+                        <th>Membresía</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="9" class="text-center">
+                            <div class="spinner"></div>
+                            Cargando datos...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 🔥 PAGINACIÓN AQUÍ -->
+            <div id="pagination"></div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 TrendGear S.A.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* Variables de Diseño con la Nueva Paleta */
+:root {
+    --bg-dark: #121212;
+    --bg-surface: #1E1E1E;              /* Fondo Oscuro de la guía */
+    --bg-surface-light: #2A2A2A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #C5C5C5;
+    
+    /* Paleta de Acentos de Autor */
+    --accent-green: #D8E2DC;            /* Verde grisáceo suave */
+    --accent-peach: #FFE5D9;            /* Rosado claro cálido */
+    --accent-pink-light: #FFCAD4;       /* Rosado pastel */
+    --accent-pink-medium: #F4ACB7;      /* Rosado medio */
+    --accent-purple: #9D8189;           /* Morado grisáceo */
+    
+    --border-color: #333333;
+    --font-main: 'Playfair Display', serif; /* Nueva tipografía elegante */
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    letter-spacing: 0.02em;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--bg-surface);
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.logo h1 span {
+    color: var(--accent-pink-medium);
+    font-style: italic;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--accent-peach);
+}
+
+/* Botón de Acción Principal (Utilizando el Morado Grisáceo) */
+.btn-primary {
+    background-color: var(--accent-purple);
+    color: #FFF;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: var(--accent-pink-light);
+    color: var(--accent-pink-light);
+}
+
+/* Hamburguesa Móvil */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: all 0.3s;
+}
+
+/* Layout Principal */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+/* Grid de KPIs con Degradados y Bordes Temáticos */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.kpi-card {
+    background-color: var(--bg-surface);
+    padding: 1.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-card h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+}
+
+.kpi-card p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.kpi-trend {
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Clases de Acento de la Paleta para las Tarjetas */
+.kpi-card.accent-green { border-left: 4px solid var(--accent-green); }
+.kpi-card.accent-green p { color: var(--accent-green); }
+
+.kpi-card.accent-peach { border-left: 4px solid var(--accent-peach); }
+.kpi-card.accent-peach p { color: var(--accent-peach); }
+
+.kpi-card.accent-pink { border-left: 4px solid var(--accent-pink-light); }
+.kpi-card.accent-pink p { color: var(--accent-pink-light); }
+
+.kpi-card.accent-purple { border-left: 4px solid var(--accent-purple); }
+.kpi-card.accent-purple p { color: var(--accent-purple); }
+
+/* Barra de Filtros */
+.controls-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls-bar h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.search-box input {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 4px;
+    width: 320px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--accent-pink-medium);
+    outline: none;
+}
+
+/* Tabla de Datos Premium */
+.table-container {
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: var(--bg-surface-light);
+    color: var(--accent-peach);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    padding: 1.2rem 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.data-table td {
+    padding: 1.2rem 1rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.015);
+}
+
+/* Badges de Membresía Estilizados */
+.badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge.gold { background-color: rgba(216, 226, 220, 0.15); color: var(--accent-green); }
+.badge.silver { background-color: rgba(255, 202, 212, 0.15); color: var(--accent-pink-light); }
+.badge.standard { background-color: rgba(157, 129, 137, 0.15); color: var(--accent-purple); }
+
+/* Footer */
+.main-footer {
+    background-color: var(--bg-surface);
+    text-align: center;
+    padding: 1.8rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Spinner animado */
+.spinner {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--accent-pink-medium);
+    animation: spin 1s linear infinite;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.pagination button {
+    background: #1e1e1e;
+    color: #ccc;
+    border: 1px solid #333;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pagination button:hover {
+    background: #ff4d6d;
+    color: white;
+    border-color: #ff4d6d;
+    transform: translateY(-1px);
+}
+
+.pagination button.active {
+    background: #ff4d6d;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255,77,109,0.5);
+}
+
+.pagination button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.pagination .dots {
+    color: #666;
+    padding: 6px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* UX Responsiva (Menú Hamburguesa) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        right: 0;
+        background-color: var(--bg-surface);
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+}
